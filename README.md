@@ -30,3 +30,9 @@ The dataset for this project has 11 tables: Employee, Customer, Invoice, Invoice
 SELECT * FROM EMPLOYEE
 ORDER BY LEVELS DESC
 LIMIT 1;
+
+**Q2. Which countries have the most Invoices?**
+```sql
+SELECT BILLING_COUNTRY, COUNT(*) AS Most_Invoices FROM INVOICE
+GROUP BY BILLING_COUNTRY
+ORDER BY Most_Invoices DESC;
